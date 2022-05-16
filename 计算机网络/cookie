@@ -1,0 +1,9 @@
+#Cookie
+Cookie解决的是两个请求页面有关联的问题。
+  例如我在www.a.com/login.php里面登陆了，我在www.a.com/index.php 也希望是登陆状态。但是，这是2个不同的页面，也就是2个不同的HTTP请求，
+这2个HTTP请求是无状态的，也就是无关联的，所以无法单纯的在index.php中读取到它在login.php中已经登陆了！
+  Cookie解决了这种诉求。cookie是把少量的信息存储在用户自己的电脑上，它在一个域名下是一个全局的，只要设置它的存储路径在域名www.a.com下 ，
+那么当用户用浏览器访问时，php就可以从这个域名的任意页面读取cookie中的信息。所以就很好的解决了我在www.a.com/login.php页面登陆了，我也可
+以在www.a.com/index.php获取到这个登陆信息了。同时又不用反复去查询数据库。
+##运行方式
+
